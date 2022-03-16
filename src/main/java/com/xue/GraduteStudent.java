@@ -1,0 +1,21 @@
+package com.xue;
+
+public class GraduteStudent extends Student {
+    int thesis;
+    public GraduteStudent(String name,int english,int math,int thesis)
+    {
+        super(name, english, math);
+        this.thesis = thesis;
+
+    }
+    public GraduteStudent(String name)
+    {
+        super(name);
+    }
+
+    public void print()
+    {
+        System.out.println(name + "\t"+english+"\t" +math + "\t" +
+                           average() + "\t" + thesis);
+    }
+}

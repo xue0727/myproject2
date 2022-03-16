@@ -2,12 +2,11 @@ package com.xue;
 
 public class Scoring {
     public static void main(String[] args) {
-        Student Ruby = new Student();
-        Ruby.name = "Ruby";
-        Ruby.english = 88;
-        Ruby.math = 100;
-        Student Elsa = new Student();
-        Elsa.name = "Elsa";
-        Elsa.english = 60;
+        Student Ruby = new Student("Ruby",80,65);
+        Ruby.print();
+        Student Elsa = new Student("Elsa",76,34);
+        Elsa.print();
+        GraduteStudent Tony = new GraduteStudent("Tony",60,78,88);
+        Tony.print();
     }
 }
