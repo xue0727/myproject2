@@ -11,8 +11,9 @@ public class GraduteStudent extends Student {
     public GraduteStudent(String name)
     {
         super(name);
+        //this.name = name;
     }
-
+    @Override
     public void print()
     {
         System.out.println(name + "\t"+english+"\t" +math + "\t" +
