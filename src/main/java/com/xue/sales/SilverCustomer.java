@@ -1,4 +1,4 @@
-package com.xue;
+package com.xue.sales;
 
 public class SilverCustomer extends customer{
     int point;

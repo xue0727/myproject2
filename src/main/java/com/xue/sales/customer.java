@@ -1,4 +1,4 @@
-package com.xue;
+package com.xue.sales;
 
 public class customer {
         String name;

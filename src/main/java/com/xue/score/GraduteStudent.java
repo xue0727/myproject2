@@ -1,4 +1,4 @@
-package com.xue;
+package com.xue.score;
 
 public class GraduteStudent extends Student {
     int thesis;

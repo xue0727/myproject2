@@ -1,4 +1,4 @@
-package com.xue;
+package com.xue.score;
 
 public class Scoring {
     public static void main(String[] args) {

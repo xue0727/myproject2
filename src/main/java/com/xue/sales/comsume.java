@@ -1,4 +1,4 @@
-package com.xue;
+package com.xue.sales;
 
 public class comsume {
     public static void main(String[] args) {

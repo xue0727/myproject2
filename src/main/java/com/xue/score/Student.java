@@ -1,4 +1,4 @@
-package com.xue;
+package com.xue.score;
 
 public class Student {
     String name;
