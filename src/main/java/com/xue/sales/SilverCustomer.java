@@ -7,9 +7,9 @@ public class SilverCustomer extends customer{
         super(name,money);
     }
 
-
+@Override
     public void print() {
             point =(int)(money*0.1f);
-        System.out.println(name + "\t" + money + "\t" + result() + "\t" + point);
+        System.out.println(name + "\t" + money + "\t" + result() + "\t" + "(" +  point + ")");
     }
 }

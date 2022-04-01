@@ -1,14 +1,25 @@
 package com.xue.sales;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class comsume {
     public static void main(String[] args) {
-        customer c1 = new customer("c1", 1200);
-        c1.print();
-        SilverCustomer c2 = new SilverCustomer("c2",2000);
-        c2.print();
-        SilverCustomer c3 = new SilverCustomer("c3",3598);
-        c3.print();
-        GoldenCustomer c4 = new GoldenCustomer("c4", 4586);
-        c4.print();
+        List<customer> customers = new ArrayList<>();
+        customers.add(new customer("c1", 1200));
+        customers.add(new SilverCustomer("c2", 2000));
+        customers.add(new SilverCustomer("c3", 3598));
+        customers.add(new GoldenCustomer("c4", 5000));
+        customers.add(new PlatinumCustomer("c5", 6000));
+
+        for (int i = 0; i < 5; i++) {
+            customers.get(i).print();
+        }
+        for (customer c:customers) {
+            c.print();
+        }
+        customers.get(0).print();
+
+        }
     }
-}
+
