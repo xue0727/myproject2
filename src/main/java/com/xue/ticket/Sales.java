@@ -36,6 +36,7 @@ public class Sales {
                     break;
                 default:
                     System.out.println("error!");
+                    finish = true;
                     break;
             }
             System.out.println(
@@ -58,8 +59,12 @@ public class Sales {
                     break;
                 default:
                     System.out.println("error!");
+                    finish = true;
                     break;
             }
+
+            System.out.println("please enter the number");
+            int number = Integer.parseInt(scanner.next());
 
             System.out.println(
                     "Please choose the ticket you want (normal：100, student：200, older：300)");
@@ -67,16 +72,16 @@ public class Sales {
             NormalTicket ticket = null;
             switch (choice2) {
                 case 100:
-                    ticket = new NormalTicket(start, end);
-                    tickets.add(new NormalTicket(start, end));
+                    ticket = new NormalTicket(start, end, number);
+                    tickets.add(new NormalTicket(start, end, number));
                     break;
                 case 200:
-                    ticket = new StudentTicket(start, end);
-                    tickets.add(new StudentTicket(start, end));
+                    ticket = new StudentTicket(start, end, number);
+                    tickets.add(new StudentTicket(start, end, number));
                     break;
                 case 300:
-                    ticket= new OlderTicket(start, end);
-                    tickets.add(new OlderTicket(start, end));
+                    ticket= new OlderTicket(start, end, number);
+                    tickets.add(new OlderTicket(start, end, number));
                     break;
                 case 0:
                     System.out.println("Cancel order");
@@ -84,6 +89,7 @@ public class Sales {
                     break;
                 default:
                     System.out.println("error!");
+                    finish = true;
                     break;
             }
 
@@ -108,6 +114,7 @@ public class Sales {
                     break;
                 default:
                     System.out.println("error!");
+                    finish = true;
                     break;
             }
 

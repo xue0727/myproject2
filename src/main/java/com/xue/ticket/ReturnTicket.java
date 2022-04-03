@@ -2,8 +2,8 @@ package com.xue.ticket;
 
 public class ReturnTicket extends StudentTicket{
     int returnticket;
-    public ReturnTicket (Station start, Station end){
-        super(start, end);
+    public ReturnTicket (Station start, Station end, int number){
+        super(start, end, number);
     }
 
     @Override

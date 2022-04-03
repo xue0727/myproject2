@@ -8,35 +8,37 @@ public class NormalTicket {
     Station start;
     Station end;
     int price;
+    int number;
 
 
-    public  NormalTicket (Station start, Station end){
+    public  NormalTicket (Station start, Station end, int number){
         this.start = start;
         this.end = end;
+        this.number = number;
 
         if (start == Station.TAIPEI){
             if (end == Station.TAIPEI){
                 System.out.println("error");
             }else if(end == Station.TAICHUNG){
-                price = 600;
+                price = 600*number;
             }else{
-                price =1500;
+                price =1500*number;
             }
         }else if (start == Station.TAICHUNG){
             if (end == Station.TAICHUNG){
                 System.out.println("error");
             }else if (end == Station.TAIPEI){
-                price = 600;
+                price = 600*number;
             }else{
-                price = 900;
+                price = 900*number;
             }
         }else if(start == Station.KAOHSIUNG){
             if (end == Station.KAOHSIUNG){
                 System.out.println("error");
             }else if (end == Station.TAIPEI){
-                price = 1500;
+                price = 1500*number;
             }else{
-                price = 900;
+                price = 900*number;
             }
         }
     }
