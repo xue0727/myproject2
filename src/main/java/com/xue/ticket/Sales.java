@@ -12,6 +12,7 @@ public class Sales {
         for (NormalTicket t:ticket) {
             t.print();
         }*/
+        List<NormalTicket> tickets = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         boolean finish = false;
         while(!finish) {
@@ -33,6 +34,9 @@ public class Sales {
                     System.out.println("Cancel order");
                     finish = true;
                     break;
+                default:
+                    System.out.println("error!");
+                    break;
             }
             System.out.println(
                     "Please enter the endstation (TAIPEI : 100 , TAICHUNG : 200 , KAOHSIUNG : 300)");
@@ -52,13 +56,15 @@ public class Sales {
                     System.out.println("Cancel order");
                     finish = true;
                     break;
+                default:
+                    System.out.println("error!");
+                    break;
             }
 
             System.out.println(
                     "Please choose the ticket you want (normal：100, student：200, older：300)");
             int choice2 = Integer.parseInt(scanner.next());
             NormalTicket ticket = null;
-            List<NormalTicket> tickets = new ArrayList<>();
             switch (choice2) {
                 case 100:
                     ticket = new NormalTicket(start, end);
@@ -70,11 +76,14 @@ public class Sales {
                     break;
                 case 300:
                     ticket= new OlderTicket(start, end);
-                    tickets.add(new StudentTicket(start, end));
+                    tickets.add(new OlderTicket(start, end));
                     break;
                 case 0:
                     System.out.println("Cancel order");
                     finish = true;
+                    break;
+                default:
+                    System.out.println("error!");
                     break;
             }
 
