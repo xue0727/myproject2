@@ -1,6 +1,6 @@
 package com.xue.score;
 
-public class Student {
+public class Student implements Print{
     String name;
     int english;
     int math;
@@ -19,6 +19,8 @@ public class Student {
     {
 
     }
+
+    @Override
     public void print()
     {
         System.out.print(name + "\t" + english + "\t" + math + "\t" + average() );
