@@ -1,15 +1,16 @@
 package com.xue.ticket;
 
-public class Sum extends OlderTicket{
-    int sum;
+public class Sum {
+    /*int sum;
     public Sum(Station start,Station end, int number){
-        super(start, end, number);
+        super(start,end,number);
     }
+
     public int sum(){
-        sum = price + studentprice + olderprice;
+        sum = sum + price ;
         return sum;
     }
     public void print(){
-        System.out.println(sum);
-    }
+        System.out.println("The sum is" + sum);
+    }*/
 }

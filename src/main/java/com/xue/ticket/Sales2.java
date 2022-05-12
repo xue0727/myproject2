@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Sales {
+public class Sales2 {
     public static void main(String[] args) {
        /* List<NormalTicket> ticket = new ArrayList<>();
         ticket.add( new NormalTicket(Station.TAIPEI, Station.KAOHSIUNG));
@@ -13,9 +13,10 @@ public class Sales {
             t.print();
         }*/
         List<NormalTicket> tickets = new ArrayList<>();
+        //List<Sum> sums = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         boolean finish = false;
-        while(!finish) {
+        while (!finish){
             System.out.println(
                     "Please enter the startstation (TAIPEI : 1 , TAICHUNG : 2 , KAOHSIUNG : 3)");
             int choice = Integer.parseInt(scanner.next());
@@ -70,6 +71,7 @@ public class Sales {
                     "Please choose the ticket you want (normal：1, student：2, older：3)");
             int choice2 = Integer.parseInt(scanner.next());
             NormalTicket ticket = null;
+            NormalTicket price = null;
             switch (choice2) {
                 case 1:
                     ticket = new NormalTicket(start, end, number);
@@ -110,6 +112,7 @@ public class Sales {
                     for (NormalTicket t:tickets) {
                         t.print();
                     }
+
                     finish = true;
                     break;
                 default:
