@@ -10,6 +10,7 @@ public class Runner {
         String exitTime = "14:03";
         SimpleDateFormat sdf =
                 new SimpleDateFormat("HH:mm");
+
         //Exception 例外
         //Exception handling 例外處理
         Date d = null;
@@ -21,19 +22,25 @@ public class Runner {
         System.out.println(d);
         System.out.println(d.getTime());
 
+
         //long a = 3*60*60*1000;
         try{
             Date d2 = sdf.parse(exitTime);
             System.out.println(d2);
             System.out.println(d2.getTime());
-            System.out.println(d.before(d2));
+            //System.out.println(d.before(d2));
             long ms = d2.getTime() - d.getTime();
             int minutes = (int)(ms/(1000*60));
             System.out.println(minutes);
-            //1小時30元
-            int hours = (minutes+30)/60;
-            System.out.println(30*hours);
+            if (minutes <= 15){
+
+            }else {
+                //1小時30元
+                int hours = (minutes + 30) / 60;
+                System.out.println(30 * hours);
+            }
             //不滿15分鐘不算錢
+
             //15-29分鐘算為半小時，收15元
             //30-44分鐘算為半小時，收15元
             //繳費完成後15分鐘內需離場
