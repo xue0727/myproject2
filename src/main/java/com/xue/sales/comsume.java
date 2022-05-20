@@ -19,7 +19,8 @@ public class comsume {
             c.print();
         }
         customers.get(0).print();
-
+        MyClass c = new MyClass();
+        c.print();
         }
     }
 
