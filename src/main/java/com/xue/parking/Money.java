@@ -1,6 +1,5 @@
 package com.xue.parking;
 
-import java.sql.SQLOutput;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,7 +8,6 @@ public class Money {
     int price;
     String enterTime;
     String exitTime;
-
 
 
     public Money(String id, String enterTime, String exitTime){

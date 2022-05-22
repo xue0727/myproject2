@@ -9,11 +9,14 @@ public class MainWindow {
     public static void main(String[] args) {
         //Graphical User Interface(GUI)
         //swing,JavaFX(eXtension)
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Choose a button");
 
         //設定如何結束程式
         //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        JLabel label = new JLabel("Please choose a button you want");
+        frame.getContentPane().add(label);
 
         //設定視窗大小
         frame.setSize(400,250);

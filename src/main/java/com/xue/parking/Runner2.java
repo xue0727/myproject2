@@ -1,7 +1,9 @@
 package com.xue.parking;
 
+import java.text.Format;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Runner2 {
     public static void main(String[] args) {
@@ -9,7 +11,7 @@ public class Runner2 {
         String enterTime = "11:55";
         String exitTime = "14:03";
         SimpleDateFormat sdf =
-                new SimpleDateFormat("HH:mm");*/
+                new SimpleDateFormat("HH:mm");
 
         Money money = new Money("ABC-1234","11:09", "12:10");
         money.print();
@@ -21,6 +23,23 @@ public class Runner2 {
 
         for (Money m:M) {
             m.print();
+        }*/
+
+        //輸入車牌號，得到收費表
+        Money money = new Money("ABC-1234","11:09", "12:10");
+        System.out.println(money.id);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the number");
+        int number = Integer.parseInt(scanner.next());
+        try {
+            Integer.parseInt(money.id);
+        if (number == Integer.parseInt(money.id)){
+            money.print();
+        }else {
+            System.out.println("ERROR");
+        }
+        }catch (NumberFormatException E){
+            System.out.println("error");
         }
 
     }
