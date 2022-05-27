@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class GuessFrame extends JFrame {
     //Fields屬性
     JButton button = new JButton("TRY");
-    JLabel label = new JLabel("Good！");
+    JLabel label = new JLabel("Goohomework1");
     JLabel label2 = new JLabel("Don't press the button！！");
     //Constructors建構子
     public GuessFrame(){
