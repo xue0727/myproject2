@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainWindow {
+public class MyWindow {
     public static void main(String[] args) {
         //Graphical User Interface(GUI)
         //swing,JavaFX(eXtension)
